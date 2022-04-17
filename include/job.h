@@ -2,7 +2,6 @@
 #define JOB_H
 
 #include "types.h"
-#include <string>
 
 namespace job {
 	class Job {

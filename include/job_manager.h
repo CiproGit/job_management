@@ -3,7 +3,6 @@
 
 #include "job.h"
 #include <QMultiMap>
-#include <QList>
 
 namespace job {
 	class Job_manager { // Singleton design pattern

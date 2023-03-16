@@ -12,7 +12,7 @@ int main(void) {
 	utilities::create_jobs();
 
 	cout << "\nJobs ordered by priority:" << endl;
-	job::Job_manager *job_manager = job::Job_manager::get_instance();
+	job::Job_manager *job_manager = job::Job_manager::get_instance(); // Please note: it returns always the same instance
 	job_manager->print_all_jobs();
 
 	cout << "\nExecuting jobs..." << endl;
@@ -24,5 +24,3 @@ int main(void) {
 	cout << "End" << endl;
 	return EXIT_SUCCESS;
 }
-
-//example of singleton, qmultimap, exception

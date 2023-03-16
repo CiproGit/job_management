@@ -19,7 +19,7 @@ namespace job {
 		throw invalid_argument("invalid status_to_string argument");
 	}
 
-	Job::Job(unsigned int id, string name, int priority, Status status) {
+	Job::Job(unsigned int id, string name, Priority priority, Status status) {
 		this->id = id;
 		this->name = name;
 		this->priority = priority;
@@ -36,7 +36,7 @@ namespace job {
 		return this->name;
 	}
 
-	int Job::get_priority() const {
+	Priority Job::get_priority() const {
 		return this->priority;
 	}
 

@@ -9,11 +9,11 @@ namespace job {
 	private:
 		Job_manager();
 		static Job_manager *instance;
-		QMultiMap<int, Job> multi_map;
+		QMultiMap<Priority, Job> multi_map; // Sorted by Priority
 	public:
 		static Job_manager *get_instance();
 		virtual ~Job_manager();
-		void create_new_job(std::string name, int priority);
+		void create_new_job(std::string name, Priority priority);
 		void print_all_jobs();
 		void work();
 	};

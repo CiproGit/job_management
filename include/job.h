@@ -23,14 +23,14 @@ namespace job {
 	private:
 		unsigned int id;
 		std::string name;
-		int priority;
+		Priority priority;
 		Status status;
 	public:
-		Job(unsigned int id, std::string name, int priority, Status status);
+		Job(unsigned int id, std::string name, Priority priority, Status status);
 		virtual ~Job();
 		unsigned int get_id() const;
 		std::string get_name() const;
-		int get_priority() const;
+		Priority get_priority() const;
 		Status get_status() const;
 		void set_status(Status status);
 	};

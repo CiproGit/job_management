@@ -1,9 +1,24 @@
 #ifndef JOB_H
 #define JOB_H
 
-#include "types.h"
+#include <string>
 
 namespace job {
+	enum Priority : int {
+		LOW,
+		MEDIUM,
+		HIGH
+	};
+
+	enum class Status : int {
+		NOT_ASSIGNED,
+		WORKING,
+		DONE
+	};
+
+	Status string_to_status(std::string s); // It converts the given string in Status
+	std::string status_to_string(Status s); // It converts the given Status in string
+
 	class Job {
 	private:
 		unsigned int id;

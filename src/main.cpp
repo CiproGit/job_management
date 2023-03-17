@@ -11,16 +11,16 @@ int main(void) {
 
 	utilities::create_jobs();
 
-	cout << "\nJobs ordered by priority:" << endl;
+	cout << "\nJobs sorted by priority:" << endl;
 	job::Job_manager *job_manager = job::Job_manager::get_instance(); // Please note: it returns always the same instance
 	job_manager->print_all_jobs();
 
 	cout << "\nExecuting jobs..." << endl;
 	utilities::do_jobs();
 
-	cout << "\nJobs ordered by priority:" << endl;
+	cout << "\nJobs sorted by priority:" << endl;
 	job_manager->print_all_jobs();
 
-	cout << "End" << endl;
+	cout << "\nEnd" << endl;
 	return EXIT_SUCCESS;
 }
